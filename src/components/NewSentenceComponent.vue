@@ -8,7 +8,7 @@
           <strong class="mt-3"> You are also part of this! </strong>
 
           <p class="mt-8">
-            Submit your preferred phrase so that (after we validate it) it
+            Submit your amazing sentence so that (after we validate it) it
             becomes part of the bot's database
           </p>
 

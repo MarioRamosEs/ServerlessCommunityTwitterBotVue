@@ -9,7 +9,7 @@
 
           <p class="mt-8">
             The backend consists of a set of Azure Functions, in a solution
-            using Clean Architecture, CQRS and MediatR
+            using <b>Clean Architecture, CQRS and MediatR</b>
           </p>
 
           <v-btn
