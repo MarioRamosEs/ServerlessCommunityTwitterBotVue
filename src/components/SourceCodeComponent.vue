@@ -33,6 +33,18 @@
           >
             FrontEnd Code
           </v-btn>
+
+          <p class="mt-8">
+            You can check a technical post about the project here
+          </p>
+          <v-btn
+            class="mt-2"
+            prepend-icon="mdi-file-document"
+            href="https://marioramos.es/serverless-community-twitter-bot/"
+            target="_blank"
+          >
+            Technical Post
+          </v-btn>
         </v-responsive>
       </v-col>
 

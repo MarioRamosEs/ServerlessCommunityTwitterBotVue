@@ -9,17 +9,11 @@
               class="mr-3"
               image="ServerlessTwitterBotLogo.png"
             />
-
             Serverless Twitter Bot
           </div>
         </v-app-bar-title>
         <v-spacer></v-spacer>
-        <v-btn
-          icon="mdi-twitter"
-          color="whitesmoke"
-          href="https://twitter.com/GigachadBot_"
-          target="_blank"
-        ></v-btn>
+
         <!--        <v-btn :icon="true" @click="toggleTheme"><v-icon>mdi-theme-light-dark</v-icon></v-btn>-->
       </v-container>
     </v-app-bar>
@@ -28,7 +22,7 @@
       <section id="hero">
         <v-sheet class="d-flex align-center pb-16" color="grey-darken-3">
           <v-container class="text-center">
-            <v-responsive class="mx-auto" width="600">
+            <v-responsive class="mx-auto" width="500">
               <v-img src="/ServerlessTwitterBotLogo.png"></v-img>
 
               <h3 class="text-h3">Serverless Twitter Bot</h3>
@@ -44,6 +38,16 @@
               <p class="mt-4 text-medium-emphasis">
                 Hosted in Azure using Functions, CosmosDB, KeyVault and Vue
               </p>
+
+              <v-btn
+                class="mt-6"
+                prepend-icon="mdi-twitter"
+                color="whitesmoke"
+                href="https://twitter.com/GigachadBot_"
+                target="_blank"
+              >
+                Go to Twitter
+              </v-btn>
             </v-responsive>
           </v-container>
         </v-sheet>

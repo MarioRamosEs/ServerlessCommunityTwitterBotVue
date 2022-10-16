@@ -32,7 +32,6 @@
               Send
             </v-btn>
           </v-form>
-
         </v-responsive>
       </v-col>
 
@@ -40,16 +39,10 @@
     </v-row>
   </v-container>
 
-  <v-snackbar
-    v-model="snackbar"
-    color="primary"
-    :timeout="2000"
-  >
+  <v-snackbar v-model="snackbar" color="primary" :timeout="2000">
     {{ text }}
-    <template v-slot:action="{ attrs }">
-    </template>
+    <template v-slot:action="{ attrs }"> </template>
   </v-snackbar>
-
 </template>
 <script>
 export default {
@@ -60,15 +53,13 @@ export default {
     loading: false,
     valid: false,
     snackbar: false,
-    text: ''
+    text: "",
   }),
   methods: {
     async sendSentence() {
       if (!this.valid || this.newSentence.length === 0) {
         return;
       }
-
-      console.log('hey')
       this.loading = true;
       try {
         const response = await fetch(
