@@ -78,7 +78,7 @@ export default {
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({ text: this.newSentence }),
+            body: JSON.stringify({ Text: this.newSentence }),
           }
         );
         this.text = "Your sentence has been sent to the bot!";
