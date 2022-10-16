@@ -51,40 +51,7 @@
 
       <v-sheet class="py-16">
         <section id="filter">
-          <v-container>
-            <v-row justify="space-between">
-              <v-col cols="auto">
-                <v-responsive width="550">
-                  <h2 class="text-h4">Send a new sentence</h2>
-
-                  <strong class="mt-3"> You are also part of this! </strong>
-
-                  <p class="mt-8">
-                    Submit your preferred phrase so that (after we validate it)
-                    it becomes part of the bot's database
-                  </p>
-
-                  <v-textarea
-                    :loading="loading"
-                    class="mt-6"
-                    label="Sentence"
-                    variant="outlined"
-                    counter
-                    :rules="rules"
-                    v-model="value"
-                    rows="3"
-                    auto-grow
-                  ></v-textarea>
-
-                  <v-btn prepend-icon="mdi-send" :loading="loading">
-                    Send
-                  </v-btn>
-                </v-responsive>
-              </v-col>
-
-              <v-img max-width="400" max-height="300" src="gigachad.jpg" />
-            </v-row>
-          </v-container>
+          <NewSentenceComponent />
         </section>
 
         <v-container>
@@ -92,48 +59,7 @@
         </v-container>
 
         <section id="github">
-          <v-container>
-            <v-row justify="space-between">
-              <v-col cols="auto">
-                <v-responsive width="550">
-                  <h2 class="text-h4">Take a look at the code</h2>
-
-                  <strong class="mt-3">
-                    Don't be shy, you can contribute!
-                  </strong>
-
-                  <p class="mt-8">
-                    The backend consists of a set of Azure Functions, in a
-                    solution using Clean Architecture, CQRS and MediatR
-                  </p>
-
-                  <v-btn
-                    class="mt-2"
-                    prepend-icon="mdi-server"
-                    href="https://github.com/MarioRamosEs/ServerlessCommunityTwitterBot"
-                    target="_blank"
-                  >
-                    BackEnd Code
-                  </v-btn>
-
-                  <p class="mt-8">
-                    The frontend is a Vue 3 application, using Vuetify 3
-                  </p>
-
-                  <v-btn
-                    class="mt-2"
-                    prepend-icon="mdi-web"
-                    href="https://github.com/MarioRamosEs/ServerlessCommunityTwitterBot"
-                    target="_blank"
-                  >
-                    FrontEnd Code
-                  </v-btn>
-                </v-responsive>
-              </v-col>
-
-              <v-img max-width="400" max-height="300" src="Octocat.png" />
-            </v-row>
-          </v-container>
+          <SourceCodeComponent />
         </section>
       </v-sheet>
     </v-main>
@@ -165,8 +91,12 @@
 
 <script>
 //import { useTheme} from "vuetify";
+import NewSentenceComponent from "./components/NewSentenceComponent.vue";
+import SourceCodeComponent from "./components/SourceCodeComponent.vue";
+
 export default {
   name: "App",
+  components: { SourceCodeComponent, NewSentenceComponent },
   /*    setup() {
       const theme = useTheme()
       return {
@@ -174,12 +104,6 @@ export default {
         toggleTheme: () => theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
       }
     }*/
-
-  data: () => ({
-    rules: [(v) => v.length <= 280 || "Max 280 characters"],
-    value: "",
-    loading: false,
-  }),
 };
 </script>
 
