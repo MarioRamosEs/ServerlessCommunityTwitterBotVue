@@ -11,7 +11,9 @@
     "build": "vite build",
     "dev": "vite",
     "start": "vite",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "format": "prettier .  --write"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
@@ -22,6 +24,10 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-vue": "^9.6.0",
+    "prettier": "^2.7.1",
     "vite": "^3.0.7",
     "vite-plugin-vuetify": "^1.0.0-alpha.14",
     "vue-cli-plugin-vuetify": "~2.5.1"

@@ -1,48 +1,48 @@
 // Styles
-import '@mdi/font/css/materialdesignicons.css'
-import 'vuetify/styles'
+import "@mdi/font/css/materialdesignicons.css";
+import "vuetify/styles";
 
 // Vuetify
-import { createVuetify } from 'vuetify'
+import { createVuetify } from "vuetify";
 
 // Components
-import { VBtn } from 'vuetify/components'
+import { VBtn } from "vuetify/components";
 
 export default createVuetify({
   aliases: {
-    VBtnAlt: VBtn
+    VBtnAlt: VBtn,
   },
   // https://next.vuetifyjs.com/features/global-configuration/
   defaults: {
     global: {
-      rounded: 'sm',
+      rounded: "sm",
     },
     VAppBar: {
       flat: true,
     },
     VBtn: {
-      color: 'primary',
+      color: "primary",
       height: 44,
     },
     VBtnAlt: {
-      color: 'primary',
+      color: "primary",
       height: 48,
-      variant: 'text',
+      variant: "text",
     },
     VSheet: {
-      color: '#212121',
+      color: "#212121",
     },
   },
   // https://next.vuetifyjs.com/features/theme/
   theme: {
-    defaultTheme: 'dark',
+    defaultTheme: "dark",
     themes: {
       dark: {
         dark: true,
         colors: {
-          primary: '#1697f6',
-        }
-      }
-    }
+          primary: "#1697f6",
+        },
+      },
+    },
   },
-})
+});
